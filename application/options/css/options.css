@@ -1,0 +1,21 @@
+.clear{
+	clear: both;
+}
+.hide{
+	display: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.bold{
+	font-weight: bold;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}

@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+    "name": "docker 服务器查询工具",
+    "description": "docker 服务器查询工具",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "common/jquery.js",
+                "common/loger.js",
+                "common/common.js",
+                "application/content/content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "scripts": [
+            "common/jquery.js",
+            "common/loger.js",
+            "common/common.js",
+            "application/config/config.js",
+            "application/background/background.js"
+        ]
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "contextMenus",
+        "browsingData"
+    ],
+    "browser_action": {
+        "default_title": "docker 服务器查询工具"
+    },
+    "options_page": "application/options/html/options.html",
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}
