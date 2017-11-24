@@ -28,7 +28,8 @@
 				searchDom.css('opacity',1);
 			});
 			$('#docker-search .search-input input').on('blur', function () {
-				searchDom.css('opacity',0.4);
+				var value = $(this).val();
+				if('' == value) searchDom.css('opacity',0.4);
 			});
 		}
 
@@ -54,7 +55,6 @@
 				resultBox.hide();
 				return;
 			}
-
 			var ul = $('#docker-search .search-result ul');
 			ul.html('');
 			$.each(result, function(key, val){
